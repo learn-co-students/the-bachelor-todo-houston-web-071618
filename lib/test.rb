@@ -1,3 +1,7 @@
+require "json"
+
+file = File.read("lib/contestants.json")
+data = JSON.parse(file)
 
 def get_first_name_of_season_winner(data, season)
   data[season].each do |people|
@@ -34,17 +38,6 @@ def count_contestants_by_hometown(data, hometown)
   count
 end
 
-def get_occupation(data, hometown)
-  # code here
-  data.each do |season, people|
-    people.each do |attribute|
-      if attribute["hometown"] == hometown
-        return occupation = attribute["occupation"]
-      end
-    end
-  end
-end
-
 def get_average_age_for_season(data, season)
   # code here
   average_age = 0.0
@@ -57,3 +50,5 @@ def get_average_age_for_season(data, season)
   average_age = average_age / count
   return average_age.round
 end
+
+p get_average_age_for_season(data, "season 10")
