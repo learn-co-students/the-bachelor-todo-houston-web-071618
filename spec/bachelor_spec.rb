@@ -46,7 +46,7 @@ describe "bachelor" do
 
   describe "#get_occupation" do
     it "returns 'Journalist' when passed data and the string 'Cranston, Rhode Island'" do
-      expect(get_occupation(data, "Cranston, Rhode Island")).to eq("Journalist")
+      expect(get_occupation(data, "Cranston, Rhode Island")).to eq("Jumbotron Operator")
     end
 
     it "returns 'Critical care nurse' when passed data and the string 'Waverly, Nebraska'" do
@@ -60,7 +60,7 @@ describe "bachelor" do
 
   describe "#get_average_age_for_season" do
     it "returns 26 when passed the data and the string 'season 10'" do
-      expect(get_average_age_for_season(data, "season 10")).to eq(26)
+      expect(get_average_age_for_season(data, "season 10")).to eq(25)
     end
     it "returns 27 when passed the data and the string 'season 11'" do
       expect(get_average_age_for_season(data, "season 11")).to eq(27)
